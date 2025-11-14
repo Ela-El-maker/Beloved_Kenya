@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beloved Church Kenya</title>
+  <meta name="description" content="Beloved Church Kenya — Where Love, Holiness & Power Meet" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  
+    <div id="navbar-placeholder"></div>
+
+
+<script>
+  // Load the navbar dynamically
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar-placeholder').innerHTML = html;
+
+      // Dynamically load navbar CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      document.head.appendChild(link);
+    })
+    .catch(err => console.error('Failed to load navbar:', err));
+</script>
+
+
+
+  <main>
+    <!-- Hero Section -->
+<section class="hero container">
+  <div class="hero-left">
+    <h1 class="hero-title">Welcome to Beloved Church Kenya</h1>
+    <p>Beloved Church Kenya is part of the beloved church in Seol South Korea founded by Senior Pastor Byun and headed in Africa by Co-Snr Pst. Jin Sung. Our kenya headquater is in Malaba Kenya,Kestern.</p>
+    <p>We share the greatest call of God as revealed to His servant the founder to raise Biblical Churches in Kenya, to influence other Churches around us by this pure doctrine of Christ and to reach out to millions of souls and win them to Jesus Christ through the 3 fold ministries as done by Jesus Christ;</p>
+        <ul>
+          <li>Teaching the Bible as it is</li>
+          <li>Preaching the gospel of the Kingdom</li>
+          <li>Healing all kind of deseases and sicknesses</li>
+        </ul>
+        <span><strong>MATTHEW 9:35</strong><br>
+          And Jesus went about all the cities and villages, teaching in their synagogues, and preaching the gospel of the kingdom, and healing every sickness and every disease among the people. 
+</span>
+    <p class="lead">
+      Where Love, Holiness, and Power Meet — join us for worship, Word, and transformation.
+    </p>
+  </div>
+  <figure class="hero-media">
+    <img src="../assets/media/Bsh. Onduru.jpg" alt="Bishop Sam Onduru" />
+  </figure>
+</section>
+
+
+    <!-- Pastor's message -->
+    <section class="section container pastor">
+      <h2>Bishop's Message</h2>
+      <div class="pastor-grid">
+        <!--img src="../assets/media/bishop.jpg" alt="Bishop Sam Onduru" class="pastor-photo"-->
+        <div class="pastor-text">
+          <p>Beloved, the Lord is calling His church to intimacy and holiness. This is a generation to arise in prayer and power. You are welcome to be part of this divine family where God still moves.</p>
+          <p class="signature">— Bishop Sam Onduru</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section container gallery" id="gallery">
+      <h2>Church Gallery</h2>
+      <p class="muted">Moments of worship, outreach and community life.</p>
+      <div class="gallery-grid">
+        <img src="../assets/media/structure.jpg" alt="Worship" class="gallery-item">
+        <img src="../assets/media/youths.jpg" alt="Youth Meeting" class="gallery-item">
+        <img src="../assets/media/children.jpg" alt="Children Ministry" class="gallery-item">
+        <img src="../assets/media/praise.jpg" alt="Choir" class="gallery-item">
+        <img src="../assets/media/ministering.jpg" alt="Bishop Ministering" class="gallery-item">
+        <img src="../assets/media/worship.jpg" alt="Outreach" class="gallery-item">
+        <img src="../assets/media/churc.jpg" alt="Worship" class="gallery-item">
+        <img src="../assets/media/ngam.jpg" alt="Youth Meeting" class="gallery-item">
+        <img src="../assets/media/food.jpg" alt="Children Ministry" class="gallery-item">
+        <img src="../assets/media/bish.jpg" alt="Choir" class="gallery-item">
+        <img src="../assets/media/chi.fa.jpg" alt="Bishop Ministering" class="gallery-item">
+        <img src="../assets/media/gen.jpg" alt="Outreach" class="gallery-item">
+        <img src="../assets/media/narok.jpg" alt="Worship" class="gallery-item">
+        <img src="../assets/media/service.jpg" alt="Youth Meeting" class="gallery-item">
+        <img src="../assets/media/mass.jpg" alt="Children Ministry" class="gallery-item">
+        <img src="../assets/media/crus.jpg" alt="Choir" class="gallery-item">
+        <img src="../assets/media/migo.jpg" alt="Bishop Ministering" class="gallery-item">
+        <img src="../assets/media/crusaide.jpg" alt="Outreach" class="gallery-item">
+        <img src="../assets/media/eldo.jpg" alt="Worship" class="gallery-item">
+        <img src="../assets/media/sif.jpg" alt="Youth Meeting" class="gallery-item">
+        <img src="../assets/media/kuria.jpg" alt="Youth Meeting" class="gallery-item">
+        
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <img id="lightbox-img" src="" alt="">
+      </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="section container quick-links">
+      <h2>Get Involved</h2>
+      <div class="links-grid">
+        <a class="card" href="events.html">
+          <h3>Events</h3>
+          <p>Find upcoming services, conferences and outreach programmes.</p>
+        </a>
+        <a class="card" href="sermons.html">
+          <h3>Sermons</h3>
+          <p>Listen to recent messages and teaching series.</p>
+        </a>
+        <a class="card" href="prayer.html">
+          <h3>Prayer</h3>
+          <p>Submit requests and join our intercessors.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+
+    // Dynamically add footer CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    document.head.appendChild(link);
+
+    // Optional: add current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Optional: load Font Awesome for social icons
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    document.head.appendChild(fa);
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+</script>
+
+  <script src="../assets/js/scripts.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

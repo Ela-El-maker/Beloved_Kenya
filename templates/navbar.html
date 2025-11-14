@@ -1,0 +1,34 @@
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="leadership.html" class="nav-link active">Leadership</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="history.html" class="nav-link">History</a>
+      </div>
+
+      <div class="nav-logo">
+        <img src="../assets/media/logo.jpg" alt="Logo">
+        <span class="nav-title">BELOVED CHURCH KENYA</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="word.html" class="nav-link">Word</a>
+        <a href="intercession.html" class="nav-link">Intercession</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="devotions.html" class="nav-link">Devotions</a>
+        <a href="healing.html" class="nav-link">Healing & Prophesy</a>
+      </div>
+
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('nav-toggle')) {
+        document.querySelector('.nav').classList.toggle('show');
+      }
+    });
+  </script>
+</header>

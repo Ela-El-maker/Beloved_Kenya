@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing Ministry | Beloved Church Kenya</title>
+
+  <!-- ===== CSS LINKS ===== -->
+  <link rel="stylesheet" href="../assets/css/healing.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Times+New+Roman&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+
+<script>
+  // Load the navbar dynamically
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar-placeholder').innerHTML = html;
+
+      // Dynamically load navbar CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      document.head.appendChild(link);
+    })
+    .catch(err => console.error('Failed to load navbar:', err));
+</script>
+
+
+  <article>
+    <!-- Top banner -->
+    <div class="topimgWrap bg_eadbc5">
+      <div class="topimgArea">
+        <h2 class="aboutbg_06">WHAT WE DO</h2>
+      </div>
+    </div>
+
+    <div class="articleWrap">
+      <div class="articleArea">
+        <!-- Main top image -->
+        <p class="blockimg main-top">
+            <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_01.jpg" alt="Word Ministry Kenya" />
+        </p>
+
+
+        <!-- Sub ministry image links -->
+        <div class="articleLi">
+          <ul>
+            <li>
+              <a href="/en/word">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_02.jpg" alt="Word Ministry">
+              </a>
+            </li>
+            <li>
+              <a href="/en/healing">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg2.jpg" alt="Healing Ministry">
+              </a>
+            </li>
+            <li>
+              <a href="/en/intercessory">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_03.jpg" alt="Intercessory Ministry">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subtitle Image -->
+        <p class="blockimg">
+          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subtitle02.jpg" alt="Healing Subtitle">
+        </p>
+
+        <!-- Section 1 -->
+        <div class="contBox_02 bg_stripe">
+          <h4 class="dolor777">The church is the body of Jesus Christ</h4>
+          <div class="textbox_minis">
+            <b>Ephesians 1:23</b><br>
+            "The church is his (Jesus’s) body."<br><br>
+
+            The mission of the church is not only to worship, baptize, have Holy Communion, have choirs, or study the Bible. Though these are all necessary, the most important aspect is to do what Jesus would do if he were living on earth in his flesh today. That is because the church is the body of Christ. In other words, the mission of a church is to do what Jesus carried out, and do even greater things than what he did.<br><br>
+
+            <b>John 14:12</b><br>
+            "I tell you the truth, anyone who has faith in me will do what I have been doing. He will do even greater things than these, because I am going to the Father."
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="contBox_02 bg_9ab2c6">
+          <h4 class="textleftt">Jesus did Triple Ministry</h4>
+          <div class="textbox_about">
+            Jesus didn't just teach the Bible, but performed His threefold ministry.<br><br>
+
+            <b>Matthew 4:23-25</b><br>
+            "Jesus went throughout Galilee, teaching in their synagogues, preaching the good news of the kingdom, and healing every disease and sickness among the people. News about him spread all over Syria, and people brought to him all who were ill with various diseases, those suffering severe pain, the demon-possessed, those having seizures, and the paralyzed, and he healed them. Large crowds from Galilee, the Decapolis, Jerusalem, Judea and the region across the Jordan followed him."<br><br>
+
+            <b>Matthew 9:35</b><br>
+            "Jesus went through all the towns and villages, teaching in their synagogues, preaching the good news of the kingdom and healing every disease and sickness."
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="contBox_02 bg_stripe">
+          <h4 class="dolor777">Jesus‘ Command</h4>
+          <div class="textbox_minis">
+            Jesus wants His church to minister His way. That is why He gave us the Great Commission.<br><br>
+
+            <b>Mark 16:15-18</b><br>
+            He said to them, "Go into all the world and preach the good news to all creation. Whoever believes and is baptized will be saved, but whoever does not believe will be condemned. And these signs will accompany those who believe: In my name they will drive out demons, they will speak in new tongues, they will pick up snakes with their hands, and when they drink deadly poison, it will not hurt them at all; they will place their hands on sick people, and they will get well."<br><br>
+
+            We have no choice. These ministries are required of all churches since this is a command by Jesus. He is the head of the church, not theologians or pastors. 
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+      <div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+
+    // Dynamically add footer CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    document.head.appendChild(link);
+
+    // Optional: add current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Optional: load Font Awesome for social icons
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    document.head.appendChild(fa);
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+</body>
+</html>

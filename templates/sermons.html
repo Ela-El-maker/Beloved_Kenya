@@ -1,0 +1,55 @@
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+<script>
+fetch('navbar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/navbar.css';
+    document.head.appendChild(link);
+  })
+  .catch(err => console.error('Failed to load navbar:', err));
+</script>
+
+<!-- Sermons Section -->
+<section class="section container">
+  <h1>Recent Sermons & Teachings</h1>
+  <p class="lead">Browse recent messages and teaching series.</p>
+  <div id="sermons"></div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/footer.css';
+    document.head.appendChild(link);
+
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    document.head.appendChild(fa);
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+</script>
+
+<!-- Sermons JS -->
+<script src="../assets/js/sermons.js" defer></script>
+<script src="../assets/js/render-sermons.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof renderSermons === 'function') {
+      renderSermons();
+    }
+  });
+</script>

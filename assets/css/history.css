@@ -1,0 +1,149 @@
+/* ===== HISTORY PAGE STYLES ===== */
+
+/* Top Banner Section */
+.topimgWrap {
+  background-image: url('https://www.belovedc.com/img/en/about/headerimg_03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.topimgArea h2.aboutbg_03 span {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+/* Article Wrapper */
+.articleWrap {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.articleArea {
+  width: 85%;
+  max-width: 900px;
+}
+
+/* History Title */
+.historyTtitle h3 {
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.historyTtitle p.Myeongjo {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  color: #777;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* History Main Image */
+.blockimg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* History Text */
+.historyContent p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.historyContent strong {
+  color: #f38b29; /* Highlight for years or key points */
+}
+
+/* Scripture Blockquote */
+blockquote {
+  border-left: 4px solid #f38b29;
+  padding-left: 20px;
+  margin-top: 30px;
+  font-style: italic;
+  color: #444;
+}
+
+.history-image-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-bottom: 100px; /* enough space for dot + label */
+  overflow: visible; /* important: ensures dot and label are not clipped */
+}
+
+.history-image-container img.blockimg {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Dot for the date */
+.timeline-dot {
+  position: absolute;
+  bottom: -30px;       /* move the dot higher from the bottom */
+  left: 50%;
+  transform: translateX(-125%);
+  width: 30px;
+  height: 30px;
+  background-color: #e23b72;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;  /* moves text to the right */
+  font-size: 0.65rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 15;         /* ensure dot is above image */
+  padding-right: 2px; /* fine-tune */
+}
+
+.timeline-dot span {
+  margin-left: 5px; /* adjust as needed */
+}
+
+/* Label under the dot */
+.timeline-label {
+  position: absolute;
+  bottom:-10px;        /* lower than the dot */
+  left: 16.5%;
+  transform: translateX(-25%);
+  max-width: 300px;
+  text-align: center;
+  font-size: 0.85rem;  /* smaller font if needed */
+  font-weight: 600;
+  color: #142b28;
+  background: rgba(255,255,255,0.95);
+  padding: 6px 10px;
+  border-radius: 5px;
+  z-index: 5;         /* lower than dot so circle text shows */
+}
+
+/* Arrow from label to dot */
+.timeline-label::before {
+  content: "";
+  position: absolute;
+  top: -25px;            /* arrow touches dot */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.95) transparent transparent transparent;
+}

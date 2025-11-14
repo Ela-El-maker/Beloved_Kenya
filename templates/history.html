@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History | Beloved Church Kenya</title>
+
+  <!-- ===== CSS LINKS ===== -->
+
+  <!-- History page stylesheet -->
+  <link rel="stylesheet" href="../assets/css/history.css">
+
+  <!-- Optional Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+
+<script>
+  // Load the navbar dynamically
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar-placeholder').innerHTML = html;
+
+      // Dynamically load navbar CSS
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      document.head.appendChild(link);
+    })
+    .catch(err => console.error('Failed to load navbar:', err));
+</script>
+
+
+  <!-- ===== HISTORY SECTION ===== -->
+  <article>
+    <!-- Top banner -->
+    <div class="topimgWrap bg_orange">
+      <div class="topimgArea">
+        <h2 class="aboutbg_03">
+          <span>THE WAY WE WALKED</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="articleWrap">
+      <div class="articleArea">
+
+        <div class="historyTtitle">
+          <h3>
+            HISTORY<br>
+            <p class="Myeongjo">
+              Footsteps of Beloved Church Kenya<br>
+              from the beginning to this day
+            </p>
+          </h3>
+        </div>
+
+
+<div class="history-image-container">
+  <img src="https://www.belovedc.com/img/en/about/history_011.jpg" alt="Beloved Church History" class="blockimg">
+
+  <!-- Dot with date -->
+  <div class="timeline-dot"><span><small>JUNE 2023</small></span></div>
+
+  <!-- Label under dot -->
+  <div class="timeline-label">
+  In June 2023, a general pastors and leaders seminar was attended by 1500 servants of God. The seminar stired up the hunger and thirst for the beginning of restoration of the true doctrine of Christ in the churhes in kenya, and in October 2023, the very first lot of <strong>208 pastors were received in Kanduyi, in Bungoma County and became part of Beloved Church branch pastors.</strong></div>
+</div>
+ 
+  
+
+        <!-- Ministry story (Kenya version) -->
+        <div class="historyContent">
+          <p>
+            The journey of <strong>Beloved Church Kenya</strong> began with a divine burden; to restore
+            the altar of love, truth, and holiness across the land. What started as a small gathering of
+            hungry believers at a general pastors and leaders conference at <strong>Full Gospel Church Malaba Town.</strong>,
+            soon became a movement of revival, touching regions and hearts with the fire of God through the <strong>Three Fold Ministries</strong> that Jesus did according to <strong>Matthew 4:23.
+          </strong></p>
+
+          <p><strong>2022:</strong> The vision was birthed through prayer and fasting, as the Lord began to raise
+          watchmen for the nation.</p>
+
+          <p><strong>2023:</strong> National conferences were birthed — moments marked by prophetic encounters,
+          healings, and the manifestation of God’s glory.</p>
+
+          <p><strong>June 2024:</strong> The ministry received another set of pastors in Eldoret Town, Uasin Gishu County.</p>
+          <p><strong>September 2024:</strong> The ministry received another group of pastors in Machakos Town, Machakos County.</p>
+          <p><strong>October 2024:</strong> The ministry received another team of pastors in Nyali Town Mombasa County.</p>
+          <p><strong>June 2024:</strong> The ministry received another set of pastors in Eldoret Town, Uasin Gishu County.</p>
+          <p><strong>September 2025:</strong> The ministry received another set of pastors in Kisumu Town, Kisumu County.</p>
+
+          <p><strong>To date:</strong> The journey continues as we build altars of revival and consecration across Kenya and beyond.</p>
+
+          <blockquote>
+            <p>“This is the LORD’s doing; it is marvellous in our eyes.” <strong>Psalm 118:23</strong></p>
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </article>
+    <div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+
+    // Dynamically add footer CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    document.head.appendChild(link);
+
+    // Optional: add current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Optional: load Font Awesome for social icons
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    document.head.appendChild(fa);
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

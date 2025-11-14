@@ -1,0 +1,382 @@
+/* ================= BODY & GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;       /* reduce vertical padding */
+  background: linear-gradient(
+            rgba(0, 0, 0, 0.6), rgba(255, 182, 193, 0.7)
+    ),
+    url('../assets/media/church-bg.jpg') center/cover no-repeat;
+  color: white;
+  min-height: auto;        /* remove enforced height */
+  height: auto;
+}
+
+.hero-left {
+  flex: 1 1 500px;
+  max-width: 600px;
+  z-index: 2;
+  transform: translateY(-10px); /* adjust lift proportionally */
+}
+
+.hero-title {
+  font-size: 2.2rem; /* slightly smaller to fit reduced height */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-left .lead {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* Hero Image */
+.hero-media {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-media img {
+   
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top; /* or use 'center' or '20% 30%' */
+    display: block;
+    margin: 5px auto;
+}
+
+.hero-media img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 182, 193, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px; /* reduced padding */
+  }
+
+  .hero-left {
+    transform: translateY(-10px); /* slightly lift */
+  }
+
+  .hero-media img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/* ================= PASTOR MESSAGE ================= */
+.pastor {
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 20px; /* reduces spacing below Pastor's message */
+}
+
+.pastor h2 {
+    color: #d27fa9;
+    margin-bottom: 40px;
+}
+
+.pastor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pastor-photo {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #d27fa9;
+}
+
+.pastor-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.pastor-text h3 {
+    color: #a21caf;
+}
+
+.signature {
+    font-style: italic;
+    font-weight: bold;
+    color: #d27fa9;
+    margin-top: 10px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    text-align: center;
+     padding: 30px 0; /* reduce top padding to bring gallery closer */
+}
+
+.gallery h2 {
+    color: #d27fa9;
+    margin-bottom: 10px;
+}
+
+.gallery .muted {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller min width */
+    gap: 10px; /* smaller gaps to fit more images */
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px; /* slightly smaller radius for compact look */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 120px; /* optional: fixed height for uniform size */
+    object-fit: cover; /* ensures image fills container nicely */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
+
+    .gallery-grid img {
+        height: 100px;
+    }
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 40px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= QUICK LINKS ================= */
+.quick-links {
+    padding: 60px 0;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.links-grid .card {
+    background: linear-gradient(135deg, #fff, #fce7f3);
+    padding: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.links-grid .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(185, 28, 28, 0.3);
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    background-color: #d27fa9;
+    color: white;
+    padding: 40px 0;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-left address, .footer-left p {
+    margin: 5px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left {
+        margin-bottom: 20px;
+    }
+
+    .pastor-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pastor-text {
+        text-align: center;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Contact Page Styles */
+    .contact-section h1 {
+      color: #b00000;
+      margin-bottom: 30px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contact-info, .map-wrap {
+      flex: 1 1 300px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-info:hover, .map-wrap:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .contact-info h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        flex-direction: column;
+      }
+    }
+
+.contact-link {
+    color: #1a73e8; /* blue */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+
+  .contact-link:active,
+  .contact-link:focus {
+    color: #ffffff; /* white when clicked */
+  }
+
+  /* Optional: also change color on hover for nice effect */
+  .contact-link:hover {
+    color: #1558b0;
+  }
+
+
+  /* ===== Section Styling ===== */
+.section {
+    padding: 40px 0; /* reduced from 60px to 40px */
+    margin: 0 auto;
+}

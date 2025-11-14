@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Devotions — Beloved Church Kenya</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Devotions-specific styles */
+    #devotions h1 { color: #b00000; margin-top: 40px; margin-bottom: 20px; }
+    .devotion { border-bottom: 1px solid #ccc; margin-bottom: 20px; padding-bottom: 20px; }
+    .devotion h3 { margin: 0 0 10px 0; color: #333; }
+    .devotion p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../assets/css/navbar.css';
+        document.head.appendChild(link);
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  </script>
+
+  <main class="container">
+    <section class="section">
+      <h1>Daily Devotions</h1>
+      <p class="lead">Short devotionals to fuel your walk with God.</p>
+
+      <!-- Devotions will be loaded here dynamically -->
+      <div id="devotions"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../assets/css/footer.css';
+        document.head.appendChild(link);
+
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/devotions.js" defer></script>
+
+<!-- Dynamic Devotions Rendering -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('devotions');
+  if (!window.devotions) return;
+
+  // Get today's local date in 'YYYY-MM-DD' format
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const localToday = `${yyyy}-${mm}-${dd}`;
+
+  // Find devotion for today
+  const todayDevotion = devotions.find(d => d.date === localToday);
+
+  container.innerHTML = ''; // clear previous content
+
+  if (todayDevotion) {
+    const devotionEl = document.createElement('article');
+    devotionEl.className = 'devotion';
+    devotionEl.style.cssText = `
+      background-color: #fdf5e6;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    `;
+    devotionEl.onmouseover = () => devotionEl.style.transform = 'scale(1.02)';
+    devotionEl.onmouseout = () => devotionEl.style.transform = 'scale(1)';
+
+    // Create notes list if any
+    let notesHTML = '';
+    if (todayDevotion.notes && todayDevotion.notes.length > 0) {
+      notesHTML = `<h4 style="margin-top:15px; color:#b00000;">Notes:</h4><ul style="margin-left:20px;">`;
+      todayDevotion.notes.forEach(note => {
+        notesHTML += `<li style="margin-bottom:5px;">${note}</li>`;
+      });
+      notesHTML += '</ul>';
+    }
+
+    devotionEl.innerHTML = `
+      <h3 style="color:#b00000; margin-bottom:10px;">${todayDevotion.title}</h3>
+      <p><strong>Date:</strong> ${todayDevotion.date}</p>
+      <p><strong>Scripture:</strong> <em>${todayDevotion.scripture}</em></p>
+      <p style="margin-top:10px; line-height:1.6;">${todayDevotion.reflection}</p>
+      ${notesHTML}
+    `;
+    container.appendChild(devotionEl);
+  } else {
+    container.innerHTML = `<p style="font-style:italic; color:#666;">No devotion for today. Check back tomorrow!</p>`;
+  }
+});
+</script>
+
+
+
+
+
+</body>
+</html>

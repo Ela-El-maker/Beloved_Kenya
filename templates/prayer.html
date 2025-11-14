@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prayer Request — Beloved Church Kenya</title>
+  <link rel="stylesheet" href="../assets/css/prayer.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../assets/css/navbar.css';
+        document.head.appendChild(link);
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  </script>
+ <main class="container">
+  <section class="section">
+    <h1>Submit Your Prayer Request</h1>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <input type="email" id="email" name="_replyto" placeholder="Your email address" required>
+      <input type="text" id="phone" name="phone" placeholder="Phone (e.g., +254712345678)" required>
+      <textarea id="message" name="message" rows="6" placeholder="Your prayer request (min 15 words)" required></textarea>
+      <br><button type="submit" class="btn primary">Send Request</button>
+      <p id="form-feedback"></p>
+    </form>
+  </section>
+</main>
+
+ <div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+
+    // Dynamically add footer CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    document.head.appendChild(link);
+
+    // Optional: add current year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Optional: load Font Awesome for social icons
+    const fa = document.createElement('link');
+    fa.rel = 'stylesheet';
+    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+    document.head.appendChild(fa);
+  })
+  .catch(err => console.error('Failed to load footer:', err));
+</script>
+  <script src="../assets/js/prayer.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</body>
+</html>

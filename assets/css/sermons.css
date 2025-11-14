@@ -1,0 +1,79 @@
+/* ===== Sermons Section ===== */
+.sermons-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.sermon {
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+}
+
+.sermon:last-child {
+  border-bottom: none;
+}
+
+.sermon h3 {
+  font-size: 1.8rem;
+  color: #d27fa9;
+  margin-bottom: 0.5rem;
+}
+
+.sermon p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.sermon a {
+  color: #4a39e9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sermon a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Media Players (FINAL WORKING VERSION) ===== */
+
+/* Audio Player */
+.sermon audio {
+  width: 300px;          /* Fixed compact size */
+  max-width: 100%;
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;     /* center audio */
+}
+
+/* Video Player */
+.sermon video {
+  width: 100%;            /* Responsive width */
+  max-width: 600px;       /* Still controlled */
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;     /* center video */
+  background: #000;
+}
+
+/* Sermons layout wrapper */
+#sermons {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .sermon h3 {
+    font-size: 1.5rem;
+  }
+
+  .sermon audio {
+    width: 100%;  /* full width on small screens */
+  }
+}
