@@ -6,7 +6,7 @@
   <title>Healing Ministry | Beloved Church Kenya</title>
 
   <!-- ===== CSS LINKS ===== -->
-  <link rel="stylesheet" href="../assets/css/healing.css" />
+  <link rel="stylesheet" href="assets/css/healing.css" />
 
   <!-- Google Fonts -->
   <link
@@ -28,7 +28,7 @@
       // Dynamically load navbar CSS
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
       document.head.appendChild(link);
     })
     .catch(err => console.error('Failed to load navbar:', err));
@@ -131,7 +131,7 @@ fetch('footer.html')
     // Dynamically add footer CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    link.href = 'assets/css/footer.css'; // path to your footer CSS
     document.head.appendChild(link);
 
     // Optional: add current year

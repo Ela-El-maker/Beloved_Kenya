@@ -7,7 +7,7 @@ fetch('navbar.html')
     document.getElementById('navbar-placeholder').innerHTML = html;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/navbar.css';
+    link.href = 'assets/css/navbar.css';
     document.head.appendChild(link);
   })
   .catch(err => console.error('Failed to load navbar:', err));
@@ -29,7 +29,7 @@ fetch('footer.html')
     document.getElementById('footer-placeholder').innerHTML = html;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/footer.css';
+    link.href = 'assets/css/footer.css';
     document.head.appendChild(link);
 
     const yearEl = document.getElementById('year');
@@ -44,8 +44,8 @@ fetch('footer.html')
 </script>
 
 <!-- Sermons JS -->
-<script src="../assets/js/sermons.js" defer></script>
-<script src="../assets/js/render-sermons.js" defer></script>
+<script src="assets/js/sermons.js" defer></script>
+<script src="assets/js/render-sermons.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (typeof renderSermons === 'function') {

@@ -8,7 +8,7 @@
   <!-- ===== CSS LINKS ===== -->
 
   <!-- History page stylesheet -->
-  <link rel="stylesheet" href="../assets/css/history.css">
+  <link rel="stylesheet" href="assets/css/history.css">
 
   <!-- Optional Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
       // Dynamically load navbar CSS
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
       document.head.appendChild(link);
     })
     .catch(err => console.error('Failed to load navbar:', err));
@@ -115,7 +115,7 @@ fetch('footer.html')
     // Dynamically add footer CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    link.href = 'assets/css/footer.css'; // path to your footer CSS
     document.head.appendChild(link);
 
     // Optional: add current year

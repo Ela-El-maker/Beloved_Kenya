@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Events — Beloved Church Kenya</title>
-  <link rel="stylesheet" href="../assets/css/events.css">
+  <link rel="stylesheet" href="assets/css/events.css">
 </head>
 <body>
 <!-- Navbar -->
@@ -17,7 +17,7 @@
 
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '../assets/css/navbar.css';
+        link.href = 'assets/css/navbar.css';
         document.head.appendChild(link);
       })
       .catch(err => console.error('Failed to load navbar:', err));
@@ -49,7 +49,7 @@ fetch('footer.html')
     // Dynamically add footer CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    link.href = 'assets/css/footer.css'; // path to your footer CSS
     document.head.appendChild(link);
 
     // Optional: add current year
@@ -64,7 +64,7 @@ fetch('footer.html')
   })
   .catch(err => console.error('Failed to load footer:', err));
 </script>
-  <script src="../assets/js/events.js" defer></script>
+  <script src="assets/js/events.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
   

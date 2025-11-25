@@ -6,7 +6,7 @@
   <title>Intercessory Ministry | Beloved Church Kenya</title>
 
   <!-- CSS Links -->
-  <link rel="stylesheet" href="../assets/css/intercession.css" />
+  <link rel="stylesheet" href="assets/css/intercession.css" />
 
   <!-- Google Fonts -->
   <link
@@ -28,7 +28,7 @@
       // Dynamically load navbar CSS
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = '../assets/css/navbar.css';  // go up 1 level from templates/
+      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
       document.head.appendChild(link);
     })
     .catch(err => console.error('Failed to load navbar:', err));
@@ -161,7 +161,7 @@ fetch('footer.html')
     // Dynamically add footer CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '../assets/css/footer.css'; // path to your footer CSS
+    link.href = 'assets/css/footer.css'; // path to your footer CSS
     document.head.appendChild(link);
 
     // Optional: add current year
