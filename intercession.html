@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,36 +10,35 @@
   <link rel="stylesheet" href="assets/css/intercession.css" />
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Times+New+Roman&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Times+New+Roman&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
   <div id="navbar-placeholder"></div>
 
 
-<script>
-  // Load the navbar dynamically
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-placeholder').innerHTML = html;
+  <script>
+    // Load the navbar dynamically
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
 
-      // Dynamically load navbar CSS
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
-      document.head.appendChild(link);
+        // Dynamically load navbar CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
+        document.head.appendChild(link);
 
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-      if (navToggle && nav) {
-        navToggle.addEventListener('click', () => nav.classList.toggle('show'));
-      }
-    })
-    .catch(err => console.error('Failed to load navbar:', err));
-</script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        if (navToggle && nav) {
+          navToggle.addEventListener('click', () => nav.classList.toggle('show'));
+        }
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  </script>
 
 
 
@@ -54,7 +54,8 @@
       <div class="articleArea">
         <!-- Main top image -->
         <p class="blockimg main-top">
-          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_01.jpg" alt="Word Ministry Kenya" />
+          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_01.jpg"
+            alt="Word Ministry Kenya" />
         </p>
 
 
@@ -63,17 +64,20 @@
           <ul>
             <li>
               <a href="/en/word">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_02.jpg" alt="Word Ministry">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_02.jpg"
+                  alt="Word Ministry">
               </a>
             </li>
             <li>
               <a href="/en/healing">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_04.jpg" alt="Healing Ministry">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_04.jpg"
+                  alt="Healing Ministry">
               </a>
             </li>
             <li>
               <a href="/en/intercessory">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg3.jpg" alt="Intercessory Ministry">
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg3.jpg"
+                  alt="Intercessory Ministry">
               </a>
             </li>
           </ul>
@@ -81,22 +85,31 @@
 
         <!-- Subtitle image -->
         <p class="blockimg">
-          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subtitle03.jpg" alt="Intercession Subtitle">
+          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subtitle03.jpg"
+            alt="Intercession Subtitle">
         </p>
 
         <!-- Section 1 -->
         <div class="contBox_02 bg_stripe">
           <div class="textbox_minis">
-            <b>There are two types of churches in this world; one is just a sanctuary and the other is a house of prayer.</b><br><br>
+            <b>There are two types of churches in this world; one is just a sanctuary and the other is a house of
+              prayer.</b><br><br>
 
-            Many just gather at churches to hold worship services. It has been long since early morning prayers and all-night prayer meetings degenerated into half-hearted services. Churches of this kind are in fact dead, just like the church at Sardis.  
-            However, in some churches, the whole congregation gathers to pray passionately as in the early churches.<br><br>
+            Many just gather at churches to hold worship services. It has been long since early morning prayers and
+            all-night prayer meetings degenerated into half-hearted services. Churches of this kind are in fact dead,
+            just like the church at Sardis.
+            However, in some churches, the whole congregation gathers to pray passionately as in the early
+            churches.<br><br>
 
             <b>Isaiah 56:7</b><br>
-            "These I will bring to my holy mountain and give them joy in my house of prayer. Their burnt offerings and sacrifices will be accepted on my altar; for my house will be called a house of prayer for all nations."<br><br>
+            "These I will bring to my holy mountain and give them joy in my house of prayer. Their burnt offerings and
+            sacrifices will be accepted on my altar; for my house will be called a house of prayer for all
+            nations."<br><br>
 
             <b>Matthew 21:12-13</b><br>
-            "Jesus entered the temple area and drove out all who were buying and selling there. He overturned the tables of the money changers and the benches of those selling doves. 'It is written,' he said to them, 'My house will be called a house of prayer,' but you are making it a 'den of robbers.'"
+            "Jesus entered the temple area and drove out all who were buying and selling there. He overturned the tables
+            of the money changers and the benches of those selling doves. 'It is written,' he said to them, 'My house
+            will be called a house of prayer,' but you are making it a 'den of robbers.'"
           </div>
         </div>
 
@@ -104,14 +117,18 @@
         <div class="contBox_02 bg_e3a66d">
           <h4 class="textleftt">POWERFUL PRAYER CREATES A POWERFUL CHURCH</h4>
           <div class="textbox_about">
-            To this day, we have many members who constantly cry out to God in prayer even to the point of losing track of time.<br><br>
+            To this day, we have many members who constantly cry out to God in prayer even to the point of losing track
+            of time.<br><br>
 
-            Every Tuesday and Thursday, our church becomes crowded with countless people coming together to pray all night.  
-            Not long ago, our congregation gathered for prayer vigils running 10 straight hours a day in preparation for a conference ahead.  
-            We didn't divide it into one hour sessions, but went through 10 hours without halt.  
+            Every Tuesday and Thursday, our church becomes crowded with countless people coming together to pray all
+            night.
+            Not long ago, our congregation gathered for prayer vigils running 10 straight hours a day in preparation for
+            a conference ahead.
+            We didn't divide it into one hour sessions, but went through 10 hours without halt.
             This shows how strong our devotion to prayers is.<br><br>
 
-            Bonnie Chavda, the wife of Rev. Mahesh Chavda, a servant of God known worldwide, once visited Rick Joyner's church to speak in a conference, and she gave the following prophecy regarding our church:
+            Bonnie Chavda, the wife of Rev. Mahesh Chavda, a servant of God known worldwide, once visited Rick Joyner's
+            church to speak in a conference, and she gave the following prophecy regarding our church:
           </div>
         </div>
 
@@ -123,33 +140,40 @@
           <div class="textbox_minis">
             <p><img src="https://www.belovedc.com/img/en/ministry/word_01.png" alt="Prophecy Image"></p><br>
 
-            <b>I thank God for the faith of life in Beloved Church.  
-            We see the faith of life in Beloved Church.  
-            I now join the faith with Beloved Church.  
-            I now join the faith with satellite churches of Beloved Church.  
-            Lord, may your mighty works be done among them.<br><br>
+            <b>I thank God for the faith of life in Beloved Church.
+              We see the faith of life in Beloved Church.
+              I now join the faith with Beloved Church.
+              I now join the faith with satellite churches of Beloved Church.
+              Lord, may your mighty works be done among them.<br><br>
 
-            Let your great miracles be done in your time.  
-            Be with these key ministers and their families.  
-            Let your signs, miracles, and the spirit of healing and deliverance come upon them.  
-            Let even the dead come back to life through those miracles.<br><br>
+              Let your great miracles be done in your time.
+              Be with these key ministers and their families.
+              Let your signs, miracles, and the spirit of healing and deliverance come upon them.
+              Let even the dead come back to life through those miracles.<br><br>
 
-            May Beloved Church and its regional sites help South Korea to do what you have prepared: to balance, anchor, and sail.<br><br>
+              May Beloved Church and its regional sites help South Korea to do what you have prepared: to balance,
+              anchor, and sail.<br><br>
 
-            I now see the pioneer ships leading the fleet at the front, the ships of the great warriors coming out from the fog.  
-            Those who row this boat to make it move forward are the intercessors of Beloved Church, while this vessel represents Korea.  
-            As we pray for Korea, we can feel the heart of Korea.<br><br>
+              I now see the pioneer ships leading the fleet at the front, the ships of the great warriors coming out
+              from the fog.
+              Those who row this boat to make it move forward are the intercessors of Beloved Church, while this vessel
+              represents Korea.
+              As we pray for Korea, we can feel the heart of Korea.<br><br>
 
-            What I have seen is that in the last three to four years, Korea has come through several stages like silkworms coming out from its cocoon.  
-            I see a genuine revival bursting out from the heart of Korean churches.  
-            This revival will renew the identity of Korea in the Kingdom of God.  
-            I pray that Korea may not follow the path of the world, because Korea bears a different genetic code apart from the world.<br><br>
+              What I have seen is that in the last three to four years, Korea has come through several stages like
+              silkworms coming out from its cocoon.
+              I see a genuine revival bursting out from the heart of Korean churches.
+              This revival will renew the identity of Korea in the Kingdom of God.
+              I pray that Korea may not follow the path of the world, because Korea bears a different genetic code apart
+              from the world.<br><br>
 
-            Right now, the intercessory prayer of Beloved Church and its regional churches is bringing Korea out of that fog by giving a clear direction and identity.<br><br>
+              Right now, the intercessory prayer of Beloved Church and its regional churches is bringing Korea out of
+              that fog by giving a clear direction and identity.<br><br>
 
-            As we can see, our intercession ministry will not only bring revival for a single church, but rather bring the entire nation from darkness into the light.<br><br>
+              As we can see, our intercession ministry will not only bring revival for a single church, but rather bring
+              the entire nation from darkness into the light.<br><br>
 
-            <p><img src="https://www.belovedc.com/img/en/ministry/word_02.png" alt="Prophecy Image 2"></p><br> 
+              <p><img src="https://www.belovedc.com/img/en/ministry/word_02.png" alt="Prophecy Image 2"></p><br>
             </b>
           </div>
         </div>
@@ -157,33 +181,34 @@
       </div>
     </div>
   </article>
-      <div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
 
-    // Dynamically add footer CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css'; // path to your footer CSS
-    document.head.appendChild(link);
+        // Dynamically add footer CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/footer.css'; // path to your footer CSS
+        document.head.appendChild(link);
 
-    // Optional: add current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+        // Optional: add current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Optional: load Font Awesome for social icons
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
-</script>
+        // Optional: load Font Awesome for social icons
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 
 </body>
+
 </html>

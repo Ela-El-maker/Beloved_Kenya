@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,62 +8,68 @@
   <meta name="description" content="Beloved Church Kenya — Where Love, Holiness & Power Meet" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  
-    <div id="navbar-placeholder"></div>
+
+  <div id="navbar-placeholder"></div>
 
 
-<script>
-  // Load the navbar dynamically
-  fetch('navbar.html') 
+  <script>
+    // Load the navbar dynamically
+    fetch('navbar.html')
 
 
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-placeholder').innerHTML = html;
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
 
-      // Dynamically load navbar CSS
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
-      document.head.appendChild(link);
-      // Attach mobile toggle handler now that navbar is in the DOM
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-      if (navToggle && nav) {
-        navToggle.addEventListener('click', () => {
-          nav.classList.toggle('show');
-        });
-      }
-    })
-    .catch(err => console.error('Failed to load navbar:', err));
-</script>
+        // Dynamically load navbar CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
+        document.head.appendChild(link);
+        // Attach mobile toggle handler now that navbar is in the DOM
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        if (navToggle && nav) {
+          navToggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+          });
+        }
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  </script>
 
 
 
   <main>
     <!-- Hero Section -->
-<section class="hero container">
-  <div class="hero-left">
-    <h1 class="hero-title">Welcome to Beloved Church Kenya</h1>
-    <p>Beloved Church Kenya is part of the Beloved Church Network of Seol South Korea founded by Senior Pastor Byun and headed in Africa by Co-Snr Pst. Jin Sung. Our kenya Headquaters are in Malaba Town, Busia County, Western Kenya.</p>
-    <p>We share the greatest call of God as revealed to His servant the founder to raise Biblical Churches in Kenya, to influence other Churches around us by this pure doctrine of Christ and to reach out to millions of souls and win them to Jesus Christ through the 3 fold ministries as done by Jesus Christ;</p>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Welcome to Beloved Church Kenya</h1>
+        <p>Beloved Church Kenya is part of the Beloved Church Network of Seol South Korea founded by Senior Pastor Byun
+          and headed in Africa by Co-Snr Pst. Jin Sung. Our kenya Headquaters are in Malaba Town, Busia County, Western
+          Kenya.</p>
+        <p>We share the greatest call of God as revealed to His servant the founder to raise Biblical Churches in Kenya,
+          to influence other Churches around us by this pure doctrine of Christ and to reach out to millions of souls
+          and win them to Jesus Christ through the 3 fold ministries as done by Jesus Christ;</p>
         <ul>
           <li>Teaching the Bible as it is</li>
           <li>Preaching the gospel of the Kingdom</li>
           <li>Healing all kind of deseases and sicknesses</li>
         </ul>
         <span><strong>MATTHEW 9:35</strong><br>
-          And Jesus went about all the cities and villages, teaching in their synagogues, and preaching the gospel of the kingdom, and healing every sickness and every disease among the people. 
-</span>
-    <p class="lead">
-      Where Love, Holiness, and Power meets; join us for worship, Word, and transformation.
-    </p>
-  </div>
-  <figure class="hero-media">
-    <img src="assets/media/Bsh. Onduru.jpg" alt="Bishop Sam Onduru" />
-  </figure>
-</section>
+          And Jesus went about all the cities and villages, teaching in their synagogues, and preaching the gospel of
+          the kingdom, and healing every sickness and every disease among the people. 
+        </span>
+        <p class="lead">
+          Where Love, Holiness, and Power meets; join us for worship, Word, and transformation.
+        </p>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/media/Bsh. Onduru.jpg" alt="Bishop Sam Onduru" />
+      </figure>
+    </section>
 
 
     <!-- Gallery -->
@@ -91,7 +98,7 @@
         <img src="assets/media/eldo.jpg" alt="Eldoret Seminar" class="gallery-item">
         <img src="assets/media/sif.jpg" alt="crusade" class="gallery-item">
         <img src="assets/media/kuria.jpg" alt="Tanzania Tour" class="gallery-item">
-        
+
       </div>
 
       <!-- Lightbox -->
@@ -124,87 +131,88 @@
   <div id="footer-placeholder"></div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const grid = document.querySelector('.gallery-grid');
-  if (!grid) return;
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.gallery-grid');
+      if (!grid) return;
 
-  let currentLabel = null;
-  function createLabel(text){
-    const lbl = document.createElement('div');
-    lbl.className = 'hover-label';
-    lbl.textContent = text;
-    document.body.appendChild(lbl);
-    return lbl;
-  }
+      let currentLabel = null;
+      function createLabel(text) {
+        const lbl = document.createElement('div');
+        lbl.className = 'hover-label';
+        lbl.textContent = text;
+        document.body.appendChild(lbl);
+        return lbl;
+      }
 
-  grid.addEventListener('pointerenter', (e) => {
-    // pointerenter bubbles only from container-level; we use closest below
-  }, true);
+      grid.addEventListener('pointerenter', (e) => {
+        // pointerenter bubbles only from container-level; we use closest below
+      }, true);
 
-  grid.addEventListener('mouseover', (e) => {
-    const img = e.target.closest('img.gallery-item');
-    if (!img || grid.contains(e.relatedTarget) && e.relatedTarget === img) return;
+      grid.addEventListener('mouseover', (e) => {
+        const img = e.target.closest('img.gallery-item');
+        if (!img || grid.contains(e.relatedTarget) && e.relatedTarget === img) return;
 
-    if (currentLabel) { currentLabel.remove(); currentLabel = null; }
+        if (currentLabel) { currentLabel.remove(); currentLabel = null; }
 
-    if (!img.alt) return; // nothing to show
+        if (!img.alt) return; // nothing to show
 
-    currentLabel = createLabel(img.alt);
+        currentLabel = createLabel(img.alt);
 
-    const rect = img.getBoundingClientRect();
-    // position centered bottom — adjust as needed
-    currentLabel.style.position = 'absolute';
-    currentLabel.style.top = (rect.top + window.scrollY + rect.height - 28) + 'px';
-    currentLabel.style.left = (rect.left + window.scrollX + rect.width/2 - currentLabel.offsetWidth/2) + 'px';
-    currentLabel.style.opacity = '1';
-  });
+        const rect = img.getBoundingClientRect();
+        // position centered bottom — adjust as needed
+        currentLabel.style.position = 'absolute';
+        currentLabel.style.top = (rect.top + window.scrollY + rect.height - 28) + 'px';
+        currentLabel.style.left = (rect.left + window.scrollX + rect.width / 2 - currentLabel.offsetWidth / 2) + 'px';
+        currentLabel.style.opacity = '1';
+      });
 
-  grid.addEventListener('mouseout', (e) => {
-    const img = e.target.closest('img.gallery-item');
-    if (!img) return;
-    // remove label when leaving image
-    if (currentLabel) { currentLabel.remove(); currentLabel = null; }
-  });
+      grid.addEventListener('mouseout', (e) => {
+        const img = e.target.closest('img.gallery-item');
+        if (!img) return;
+        // remove label when leaving image
+        if (currentLabel) { currentLabel.remove(); currentLabel = null; }
+      });
 
-  // optional: reposition label on scroll/resize while hovered
-  window.addEventListener('scroll', () => {
-    if (!currentLabel) return;
-    // remove for simplicity (or recompute position if you prefer)
-    currentLabel.remove(); currentLabel = null;
-  }, { passive: true });
-});
-</script>
+      // optional: reposition label on scroll/resize while hovered
+      window.addEventListener('scroll', () => {
+        if (!currentLabel) return;
+        // remove for simplicity (or recompute position if you prefer)
+        currentLabel.remove(); currentLabel = null;
+      }, { passive: true });
+    });
+  </script>
 
 
 
-<script>
-fetch('footer.html')
+  <script>
+    fetch('footer.html')
 
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
 
-    // Dynamically add footer CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css'; // path to your footer CSS
-    document.head.appendChild(link);
+        // Dynamically add footer CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/footer.css'; // path to your footer CSS
+        document.head.appendChild(link);
 
-    // Optional: add current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+        // Optional: add current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Optional: load Font Awesome for social icons
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
-</script>
+        // Optional: load Font Awesome for social icons
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
 
   <script src="assets/js/scripts.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>

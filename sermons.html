@@ -1,21 +1,21 @@
 <!-- Navbar -->
 <div id="navbar-placeholder"></div>
 <script>
-fetch('navbar.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('navbar-placeholder').innerHTML = html;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/navbar.css';
-    document.head.appendChild(link);
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar-placeholder').innerHTML = html;
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'assets/css/navbar.css';
+      document.head.appendChild(link);
       const navToggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.nav');
       if (navToggle && nav) {
         navToggle.addEventListener('click', () => nav.classList.toggle('show'));
       }
-  })
-  .catch(err => console.error('Failed to load navbar:', err));
+    })
+    .catch(err => console.error('Failed to load navbar:', err));
 </script>
 
 <!-- Sermons Section -->
@@ -28,24 +28,24 @@ fetch('navbar.html')
 <!-- Footer -->
 <div id="footer-placeholder"></div>
 <script>
-fetch('footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css';
-    document.head.appendChild(link);
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'assets/css/footer.css';
+      document.head.appendChild(link);
 
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+      document.head.appendChild(fa);
+    })
+    .catch(err => console.error('Failed to load footer:', err));
 </script>
 
 <!-- Sermons JS -->

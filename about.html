@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Beloved Church Kenya</title>
   <link rel="stylesheet" href="assets/css/about.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <div id="navbar-placeholder"></div>
@@ -28,122 +30,136 @@
       })
       .catch(err => console.error('Failed to load navbar:', err));
   </script>
-		<!-- Top Banner with Text Overlay -->
-<div class="topimgWrap" style="background-image: url('https://www.belovedc.com/img/en/about/vision_img.jpg');">
-  <h2 class="aboutbg_02">WHAT WE SEEK</h2>
-</div>
-
-
-<!-- Article Section -->
-<div class="articleWrap">
-  <div class="articleArea">
-
-    <h3 class="h3pink">
-      THREE VISION MOVEMENT
-    </h3>
-    <p class="Myeongjo">Beloved Church strives to fulfill these three visions</p>
-    <p class="Myeongjo footsteps">based on the perfect words of Jesus</p>
-
-    
-    <!-- Block Images -->
-    <div class="blockimg ma_top8p">
-      <img class="blockimg" src="/img/en/about/02_subimg01.gif" alt="">
-    </div>
-
-    <div class="ma_top9">
-      <div><a href="javascript:fnMove('p1');"><img class="blockimg" src="https://www.belovedc.com/img/en/about/02_subimg01.gif" alt=""></a></div>
-      <div class="pc_only"><a href="javascript:fnMove('p2')"><img class="blockimg" src="https://www.belovedc.com/img/en/about/02_subimg01_01.gif" alt=""></a></div>
-      <div class="pc_only"><a href="javascript:fnMove('pa2')"><img class="blockimg" src="https://www.belovedc.com/img/en/about/02_subimg01_02.gif" alt=""></a></div>
-      <div><a href="javascript:fnMove('p3')"><img class="blockimg" src="https://www.belovedc.com/img/en/about/02_subimg01_03.gif" alt=""></a></div>
-    </div>
-
-    <!-- First Vision -->
-    <div id="p1" class="contBox_01 ma_top8p">
-      <div class="textbox_img">
-        <img src="https://www.belovedc.com/img/en/about/02_subimg02.jpg" alt="">
-      </div>
-      <div class="textbox_tx">
-        <p class="line_title">First, our church preaches according to what the Scripture says.</p>
-        <p class="textbox_about">
-          We constantly strive to honestly teach not the doctrines, ‘the commands of men,’ but the truth, ‘the commands of God’ exactly according to the Scripture without compromising it at all. (Mar. 7:1-9, 13; 2 Tim.2:15; Tit. 1:9)
-        </p>
-      </div>
-    </div>
-
-    <!-- Second Vision: Desktop -->
-    <div id="p2" class="contBox_03 ma_top8p bg_stripe clearfix pc_only" style="padding:5%;">
-      <div class="textbox_tx textright">
-        <p class="line_title">Secondly, our church proclaims the gospel of the kingdom.</p>
-        <p class="textbox_about">
-          We guide our saints to the narrow path of life in order that they would possess heaven in their hearts and surely enter the kingdom of heaven as we proclaim ‘the gospel of the kingdom,’ not a false gospel taught by the Salvation Sect* by emphasizing repentance, the lordship of Jesus, living faith with works to follow, and the cost of being a disciple. (Mat. 7:21; Luk. 14:25-33; Act. 20:21)
-          <br><br>
-          *Salvation Sect: a Sandemanian heresy in Korea
-        </p>
-      </div>
-      <div class="textbox_img">
-        <img src="https://www.belovedc.com/img/en/about/02_subimg03.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Second Vision: Mobile -->
-    <div id="pa2" class="contBox_03 ma_top8p clearfix mb_only vision_02beg">
-      <div class="textbox_img">
-        <img src="https://www.belovedc.com/img/en/about/02_subimg04.jpg" alt="">
-      </div>
-      <div class="textbox_tx textright">
-        <p class="line_title">Secondly, our church proclaims the gospel of the kingdom.</p>
-        <p class="textbox_about">
-          We guide our saints to the narrow path of life in order that they would possess heaven in their hearts and surely enter the kingdom of heaven as we proclaim ‘the gospel of the kingdom,’ not a false gospel taught by the Salvation Sect* by emphasizing repentance, the lordship of Jesus, living faith with works to follow, and the cost of being a disciple. (Mat. 7:21; Luk. 14:25-33; Act. 20:21)
-          <br><br>
-          *Salvation Sect: a Sandemanian heresy in Korea
-        </p>
-      </div>
-    </div>
-
-    <!-- Third Vision -->
-    <div id="p3" class="contBox_01 ma_top8p">
-      <div class="textbox_img">
-        <img src="https://www.belovedc.com/img/en/about/02_subimg04.jpg" alt="">
-      </div>
-      <div class="textbox_tx">
-        <p class="line_title">Lastly, our church heals every disease and sickness.</p>
-        <p class="textbox_about">
-          We, clothed in the power of the Holy Spirit as the body of Jesus, do our utmost to deliver the city, the nation and the rest of the nations around the world by doing what Jesus did and even greater works. (Mar.16:15-20; Joh. 14:12; 1 Cor. 2:1-5)
-          <br><br>
-          In a word, our church carries out ‘the three-fold ministry’ (Mat. 4:23, 9:35) in the imitation of Jesus!
-        </p>
-      </div>
-    </div>
-
+  <!-- Top Banner with Text Overlay -->
+  <div class="topimgWrap" style="background-image: url('https://www.belovedc.com/img/en/about/vision_img.jpg');">
+    <h2 class="aboutbg_02">WHAT WE SEEK</h2>
   </div>
-</div>
-   
-<div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
 
-    // Dynamically add footer CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css'; // path to your footer CSS
-    document.head.appendChild(link);
 
-    // Optional: add current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  <!-- Article Section -->
+  <div class="articleWrap">
+    <div class="articleArea">
 
-    // Optional: load Font Awesome for social icons
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
-</script>
-	
+      <h3 class="h3pink">
+        THREE VISION MOVEMENT
+      </h3>
+      <p class="Myeongjo">Beloved Church strives to fulfill these three visions</p>
+      <p class="Myeongjo footsteps">based on the perfect words of Jesus</p>
+
+
+      <!-- Block Images -->
+      <div class="blockimg ma_top8p">
+        <img class="blockimg" src="/img/en/about/02_subimg01.gif" alt="">
+      </div>
+
+      <div class="ma_top9">
+        <div><a href="javascript:fnMove('p1');"><img class="blockimg"
+              src="https://www.belovedc.com/img/en/about/02_subimg01.gif" alt=""></a></div>
+        <div class="pc_only"><a href="javascript:fnMove('p2')"><img class="blockimg"
+              src="https://www.belovedc.com/img/en/about/02_subimg01_01.gif" alt=""></a></div>
+        <div class="pc_only"><a href="javascript:fnMove('pa2')"><img class="blockimg"
+              src="https://www.belovedc.com/img/en/about/02_subimg01_02.gif" alt=""></a></div>
+        <div><a href="javascript:fnMove('p3')"><img class="blockimg"
+              src="https://www.belovedc.com/img/en/about/02_subimg01_03.gif" alt=""></a></div>
+      </div>
+
+      <!-- First Vision -->
+      <div id="p1" class="contBox_01 ma_top8p">
+        <div class="textbox_img">
+          <img src="https://www.belovedc.com/img/en/about/02_subimg02.jpg" alt="">
+        </div>
+        <div class="textbox_tx">
+          <p class="line_title">First, our church preaches according to what the Scripture says.</p>
+          <p class="textbox_about">
+            We constantly strive to honestly teach not the doctrines, ‘the commands of men,’ but the truth, ‘the
+            commands of God’ exactly according to the Scripture without compromising it at all. (Mar. 7:1-9, 13; 2
+            Tim.2:15; Tit. 1:9)
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Vision: Desktop -->
+      <div id="p2" class="contBox_03 ma_top8p bg_stripe clearfix pc_only" style="padding:5%;">
+        <div class="textbox_tx textright">
+          <p class="line_title">Secondly, our church proclaims the gospel of the kingdom.</p>
+          <p class="textbox_about">
+            We guide our saints to the narrow path of life in order that they would possess heaven in their hearts and
+            surely enter the kingdom of heaven as we proclaim ‘the gospel of the kingdom,’ not a false gospel taught by
+            the Salvation Sect* by emphasizing repentance, the lordship of Jesus, living faith with works to follow, and
+            the cost of being a disciple. (Mat. 7:21; Luk. 14:25-33; Act. 20:21)
+            <br><br>
+            *Salvation Sect: a Sandemanian heresy in Korea
+          </p>
+        </div>
+        <div class="textbox_img">
+          <img src="https://www.belovedc.com/img/en/about/02_subimg03.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- Second Vision: Mobile -->
+      <div id="pa2" class="contBox_03 ma_top8p clearfix mb_only vision_02beg">
+        <div class="textbox_img">
+          <img src="https://www.belovedc.com/img/en/about/02_subimg04.jpg" alt="">
+        </div>
+        <div class="textbox_tx textright">
+          <p class="line_title">Secondly, our church proclaims the gospel of the kingdom.</p>
+          <p class="textbox_about">
+            We guide our saints to the narrow path of life in order that they would possess heaven in their hearts and
+            surely enter the kingdom of heaven as we proclaim ‘the gospel of the kingdom,’ not a false gospel taught by
+            the Salvation Sect* by emphasizing repentance, the lordship of Jesus, living faith with works to follow, and
+            the cost of being a disciple. (Mat. 7:21; Luk. 14:25-33; Act. 20:21)
+            <br><br>
+            *Salvation Sect: a Sandemanian heresy in Korea
+          </p>
+        </div>
+      </div>
+
+      <!-- Third Vision -->
+      <div id="p3" class="contBox_01 ma_top8p">
+        <div class="textbox_img">
+          <img src="https://www.belovedc.com/img/en/about/02_subimg04.jpg" alt="">
+        </div>
+        <div class="textbox_tx">
+          <p class="line_title">Lastly, our church heals every disease and sickness.</p>
+          <p class="textbox_about">
+            We, clothed in the power of the Holy Spirit as the body of Jesus, do our utmost to deliver the city, the
+            nation and the rest of the nations around the world by doing what Jesus did and even greater works.
+            (Mar.16:15-20; Joh. 14:12; 1 Cor. 2:1-5)
+            <br><br>
+            In a word, our church carries out ‘the three-fold ministry’ (Mat. 4:23, 9:35) in the imitation of Jesus!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+
+        // Dynamically add footer CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/footer.css'; // path to your footer CSS
+        document.head.appendChild(link);
+
+        // Optional: add current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Optional: load Font Awesome for social icons
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
+
 
 
 </body>

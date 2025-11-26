@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Events — Beloved Church Kenya</title>
   <link rel="stylesheet" href="assets/css/events.css">
 </head>
+
 <body>
-<!-- Navbar -->
+  <!-- Navbar -->
   <div id="navbar-placeholder"></div>
   <script>
     fetch('navbar.html')
@@ -30,51 +32,52 @@
   </script>
 
   <main class="container">
-  <section class="section">
-    <h1>Church Conferences & Seminars</h1>
-    <p class="lead">Stay updated on our gatherings, revivals, and seminars.</p>
+    <section class="section">
+      <h1>Church Conferences & Seminars</h1>
+      <p class="lead">Stay updated on our gatherings, revivals, and seminars.</p>
 
-    <h2>Upcoming Events</h2>
-    <div id="upcoming-events" class="events-list"></div>
+      <h2>Upcoming Events</h2>
+      <div id="upcoming-events" class="events-list"></div>
 
-    <h2>Past Events</h2>
-    <div id="past-events" class="events-list"></div>
-  </section>
-</main>
+      <h2>Past Events</h2>
+      <div id="past-events" class="events-list"></div>
+    </section>
+  </main>
 
-<script src="assets/js/events.js"></script>
+  <script src="assets/js/events.js"></script>
 
 
   <div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
 
-    // Dynamically add footer CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css'; // path to your footer CSS
-    document.head.appendChild(link);
+        // Dynamically add footer CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/footer.css'; // path to your footer CSS
+        document.head.appendChild(link);
 
-    // Optional: add current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+        // Optional: add current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Optional: load Font Awesome for social icons
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
-</script>
+        // Optional: load Font Awesome for social icons
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
   <script src="assets/js/events.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
-  
+
 
 
 </body>
+
 </html>

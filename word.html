@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,37 +10,35 @@
   <link rel="stylesheet" href="assets/css/word.css" />
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Times+New+Roman&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Times+New+Roman&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-    <div id="navbar-placeholder"></div>
+  <div id="navbar-placeholder"></div>
 
 
-<script>
-  // Load the navbar dynamically
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-placeholder').innerHTML = html;
+  <script>
+    // Load the navbar dynamically
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
 
-      // Dynamically load navbar CSS
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
-      document.head.appendChild(link);
+        // Dynamically load navbar CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/navbar.css';  // go up 1 level from templates/
+        document.head.appendChild(link);
 
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-      if (navToggle && nav) {
-        navToggle.addEventListener('click', () => nav.classList.toggle('show'));
-      }
-    })
-    .catch(err => console.error('Failed to load navbar:', err));
-</script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        if (navToggle && nav) {
+          navToggle.addEventListener('click', () => nav.classList.toggle('show'));
+        }
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  </script>
 
 
   <article>
@@ -57,7 +56,8 @@
 
         <!-- Main top image -->
         <p class="blockimg main-top">
-          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_01.jpg" alt="Word Ministry Kenya" />
+          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_01.jpg"
+            alt="Word Ministry Kenya" />
         </p>
 
 
@@ -66,17 +66,20 @@
           <ul>
             <li>
               <a href="#">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg1.jpg" alt="Word Ministry" />
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg1.jpg"
+                  alt="Word Ministry" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_04.jpg" alt="Healing Ministry" />
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_04.jpg"
+                  alt="Healing Ministry" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_03.jpg" alt="Intercessory Ministry" />
+                <img class="articleimg" src="https://www.belovedc.com/img/en/ministry/01_subimg_03.jpg"
+                  alt="Intercessory Ministry" />
               </a>
             </li>
           </ul>
@@ -93,7 +96,8 @@
 
         <!-- Subtitle Image -->
         <p class="ma_top8p blockimg">
-          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subtitle01.jpg" alt="Bible Foundation" />
+          <img class="blockimg" src="https://www.belovedc.com/img/en/ministry/01_subtitle01.jpg"
+            alt="Bible Foundation" />
         </p>
 
         <!-- Section 1 -->
@@ -105,8 +109,10 @@
             </b>
 
             <b>2 Timothy 3:15-17</b><br>
-            and how from infancy you have known the holy Scriptures, which are able to make you wise for salvation through faith in Christ Jesus.
-            All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness,
+            and how from infancy you have known the holy Scriptures, which are able to make you wise for salvation
+            through faith in Christ Jesus.
+            All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in
+            righteousness,
             so that the man of God may be thoroughly equipped for every good work.<br><br>
 
             <b>Matthew 5:19</b><br>
@@ -121,11 +127,14 @@
           <h4 class="textleftt">Sermons must provide spiritual food</h4>
           <div class="textbox_about">
             <b>Deuteronomy 8:3</b><br>
-            He humbled you, causing you to hunger and then feeding you with manna, which neither you nor your fathers had known,
-            to teach you that man does not live on bread alone but on every word that comes from the mouth of the LORD.<br><br>
+            He humbled you, causing you to hunger and then feeding you with manna, which neither you nor your fathers
+            had known,
+            to teach you that man does not live on bread alone but on every word that comes from the mouth of the
+            LORD.<br><br>
 
             <b>Matthew 4:4</b><br>
-            Jesus answered, "It is written: 'Man does not live on bread alone, but on every word that comes from the mouth of God.'"
+            Jesus answered, "It is written: 'Man does not live on bread alone, but on every word that comes from the
+            mouth of God.'"
           </div>
         </div>
 
@@ -134,11 +143,14 @@
           <h4 class="dolor777">For the Gospel bears great power, it has to transform people</h4>
           <div class="textbox_minis">
             <b>Romans 1:16</b><br>
-            I am not ashamed of the gospel, because it is the power of God for the salvation of everyone who believes.<br><br>
+            I am not ashamed of the gospel, because it is the power of God for the salvation of everyone who
+            believes.<br><br>
 
             <b>1 Corinthians 1:18, 24</b><br>
-            For the message of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God.<br>
-            but to those whom God has called, both Jews and Greeks, Christ the power of God and the wisdom of God.<br><br>
+            For the message of the cross is foolishness to those who are perishing, but to us who are being saved it is
+            the power of God.<br>
+            but to those whom God has called, both Jews and Greeks, Christ the power of God and the wisdom of
+            God.<br><br>
 
             <b>Hebrews 4:12</b><br>
             For the word of God is living and active. Sharper than any double-edged sword,
@@ -191,32 +203,33 @@
       </div>
     </div>
   </article>
-      <div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
 
-    // Dynamically add footer CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'assets/css/footer.css'; // path to your footer CSS
-    document.head.appendChild(link);
+        // Dynamically add footer CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/footer.css'; // path to your footer CSS
+        document.head.appendChild(link);
 
-    // Optional: add current year
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+        // Optional: add current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Optional: load Font Awesome for social icons
-    const fa = document.createElement('link');
-    fa.rel = 'stylesheet';
-    fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-    document.head.appendChild(fa);
-  })
-  .catch(err => console.error('Failed to load footer:', err));
-</script>
+        // Optional: load Font Awesome for social icons
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+        document.head.appendChild(fa);
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
+
 </html>
