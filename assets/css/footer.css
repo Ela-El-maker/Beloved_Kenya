@@ -10,6 +10,7 @@
   position: relative;              /* for overlay if needed */
 }
 
+
 /* Optional overlay for readability */
 .site-footer::before {
   content: '';

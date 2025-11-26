@@ -55,11 +55,11 @@
            alt="Seung Woo Byun">
       <h4>Snr Pst Seung Woo Byun</h4>
         <strong><small>Vision Bearer (South Korea)</small></strong><br>
-        <span class="bishop-notes"><small>"A pioneer of purpose, a vessel ordained to carry the weight of revelation."
+        <span class="bishop-notes"><small>"A pioneer of purpose, a vessel ordained to carry the burden of revival."
         </small></span><br>
-        <span class="bishop-notes"><small> "Byun walks where heaven and earth converge, ushering in vision with clarity and power."
+        <span class="bishop-notes"><small> "Byun usheres in vision with clarity and power."
         </small></span><br>
-        <span class="bishop-notes"><small> "The <strong>Author of 150 Spiritual Books</strong> with turth and strong messages backed by Scriptures;
+        <span class="bishop-notes"><small><strong>"Author of 150 Spiritual Books</strong>backed by Scriptures;
           <ul class="ul"><strong>
             <ol>The Gospel Pervaded by Power</ol>
             <ol>The Kingdom of Overcomers</ol>
@@ -80,15 +80,15 @@
         <strong><small>head of beloved church african missions.</small></strong><br>
         <span class="bishop-notes"><small>"A sentinel of the altar, steadfast in prayer and unwavering in truth."
         </small></span><br>
-        <span class="bishop-notes"><small> "Having worked under pst Byun,pst Jin has  a heart to teach and preach
+        <span class="bishop-notes"><small> "Having worked under pst Byun, pst Jin has  a heart to teach and preach
         </small></span><br>
-        <span class="bishop-notes"><small> the kingdom gospel to all generations of africa and the world that he has ministered.
+        <span class="bishop-notes"><small> the kingdom gospel to all generations of the world that he has ministered.
         </small></span><br>
-        <span class="bishop-notes"><small> There are evidences of change and revival, not only in the beloved church,but in all the pastors 
+        <span class="bishop-notes"><small> There are evidences of change and revival in all the pastors and leaders
         </small></span><br>
-        <span class="bishop-notes"><small> and leaders. He has a heart for souls and is dedicated to win as many souls
+        <span class="bishop-notes"><small>He has a heart for souls and is dedicated to win as many souls to christ.
         </small></span><br>
-      <span class="bishop-notes"><small>to christ. His passion and dedication is divine and spirit motivated."
+      <span class="bishop-notes"><small>His passion and dedication is divine and spirit motivated."
       </small></span>
     </div>
         <div class="vision-card onduru leader-card">
@@ -98,16 +98,43 @@
     <span class="bishop-notes"><small>"Gifted in insight and discernment, Onduru navigates challenges with divine strategy."</small></span><br>
     <span class="bishop-notes"><small>"His leadership is precise, yet gentle."</small></span><br>
     <span class="bishop-notes"><small>"Wherever he steps, order replaces chaos, and purpose is fulfilled."</small></span>
-</div>
-
-
-      
+</div> 
     </div>
   </div>
 </div>
-<br>
-</section>
+<script>
+window.addEventListener('load', () => {
+  const body = document.body;
+  const html = document.documentElement;
+  const visionLine = document.querySelector('.vision-line');
+  const regional = document.querySelector('.regional-bishops');
 
+  // Prevent horizontal overflow globally
+  body.style.overflowX = 'hidden';
+  html.style.overflowX = 'hidden';
+
+  // Reduce vertical spacing between sections
+  if(visionLine) visionLine.style.marginBottom = '10px';
+  if(regional) regional.style.marginTop = '10px';
+
+  // Optional: reduce heading margins inside regional bishops
+  if(regional){
+    const regionalHeading = regional.querySelector('h2');
+    if(regionalHeading){
+      regionalHeading.style.marginTop = '2px';
+      regionalHeading.style.marginBottom = '2px';
+    }
+  }
+});
+
+// Also run on resize to handle viewport changes
+window.addEventListener('resize', () => {
+  document.body.style.overflowX = 'hidden';
+  document.documentElement.style.overflowX = 'hidden';
+});
+</script>
+
+</section>
   <!-- Regional Bishops -->
 <section class="regional-bishops">
   <h2>Regional Overseers</h2>
