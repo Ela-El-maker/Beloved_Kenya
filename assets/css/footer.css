@@ -1,114 +1,114 @@
 /* ===== Footer ===== */
 .site-footer {
     /* Add background image */
-    background: url("media/footer.jpg") center/cover no-repeat; /* relative path from assets folder */
-    color: #ccc;                  
-    padding: 0.75rem 1rem;           /* reduced from 3rem to 2rem */
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-    position: relative;              /* for overlay if needed */
+  background: url('../media/footer.jpg') center/cover no-repeat;
+
+  color: #ccc;                  
+  padding: 0.75rem 1rem;           /* reduced from 3rem to 2rem */
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  position: relative;              /* for overlay if needed */
 }
 
 /* Optional overlay for readability */
 .site-footer::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);  /* adjust darkness as needed */
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);  /* adjust darkness as needed */
+  z-index: 0;
 }
 
 /* Ensure footer content stays above overlay */
 .site-footer * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Footer container remains the same */
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1275px;
-    margin: 0 auto;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1275px;
+  margin: 0 auto;
+  gap: 1.5rem;
 }
 
 /* Footer left and right content styles remain unchanged */
 .footer-left strong {
-    display: block;
-    font-size: 1.2rem;
-    color: #e6c2c2;
-    margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  color: #e6c2c2;
+  margin-bottom: 0.5rem;
 }
 
-/* Logo container with correct path */
+/* Updated logo path */
 .logo-container {
     margin-bottom: 0.2rem;
     width: 225px;
     height: 120px;
-    background: #ccc url("media/Kenya.jpg") center/cover no-repeat; /* relative path from assets folder */
+    background: #ccc url("media/Kenya.jpg") center/cover no-repeat; /* updated path */
     margin: 0 auto 0.5rem auto;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer text styles */
 .footer-left address,
 .footer-left small {
-    font-style: normal;
-    font-size: 0.95rem;
-    color: #ccc;
-    line-height: 1.5;
-    margin-top: 0;
-    padding-top: 0;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .footer-right {
-    text-align: right;
-    flex: 1;
+  text-align: right;
+  flex: 1;
 }
 
 .footer-right small {
-    display: block;
-    margin-bottom: 2rem;
-    color: #ccc;
+  display: block;
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
 .sns {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 .sns li a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 2.5rem;
-    transition: color 0.3s ease;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
 }
 
 .sns li a:hover {
-    color: #2e2c2d;
+  color: #2e2c2d;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .footer-right {
-        text-align: center;
-    }
+  .footer-right {
+    text-align: center;
+  }
 
-    .sns {
-        justify-content: center;
-        margin-top: 1rem;
-    }
+  .sns {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
