@@ -84,7 +84,7 @@
   color: #ffe4ec;
 }
 
-/* Toggle for mobile */
+/* Desktop toggle stays hidden */
 .nav-toggle {
   display: none;
   background: none;
@@ -92,37 +92,36 @@
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  z-index: 999999;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px; /* extra spacing for toggle */
+  }
+
+  .nav-toggle {
+    display: block; /* show toggle on mobile */
+    margin-bottom: 10px; /* space below toggle */
+  }
+
   .nav-left, .nav-right {
-    display: none;
+    display: none; /* hide links by default */
     flex-direction: column;
     width: 100%;
     text-align: center;
-    margin-top: 50px; /* push down to not cover toggle */
+    margin-top: 10px;
   }
 
+  /* Show links when menu is toggled */
   .nav.show .nav-left,
   .nav.show .nav-right {
     display: flex;
   }
 
-  .nav-toggle {
-    display: block; /* show toggle only on small screens */
-  }
-
   .nav-logo {
-    margin: 10px auto;
+    margin: 10px auto; /* keep logo centered */
   }
-}
-
-/* Make sure all nav elements have pointer cursor */
-.nav-left, .nav-right, .nav-toggle {
-  cursor: pointer;
 }
