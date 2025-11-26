@@ -1,8 +1,9 @@
 <header class="site-header">
   <div class="header-inner">
     <nav class="nav">
-      <!-- Mobile Toggle Button -->
-      <button class="nav-toggle">☰</button>
+
+  <!-- Mobile Toggle Button (ABSOLUTE POSITION) -->
+  <button class="nav-toggle">☰</button>
       <div class="nav-left">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="leadership.html" class="nav-link active">Leadership</a>
@@ -24,21 +25,15 @@
 
     </nav>
   </div>
-   <script>
-    // Toggle mobile menu
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  </script>
-  
+   
   <script>
-    document.addEventListener('click', function(e) {
-      if (e.target.classList.contains('nav-toggle')) {
-        document.querySelector('.nav').classList.toggle('show');
-      }
-    });
-  </script>
+  // Toggle mobile menu
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+
 </header>
